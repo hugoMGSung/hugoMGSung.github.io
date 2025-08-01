@@ -4,9 +4,11 @@ title: "첫 블로그입니다"
 categories: intro
 tag: [intro, iot]
 toc: true
+toc_sticky: true
+toc_label: "목차"
 author_profile: false
 sidebar:
-    nav: "docs"
+    nav: "counts"
 ---
 
 # 가자!

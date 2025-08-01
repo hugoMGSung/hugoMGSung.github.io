@@ -8,19 +8,20 @@ html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: $background-color;
-  font-size: $doc-font-size;
+  // font-size: $doc-font-size;
+  font-size: 16pt;
 
-  @include breakpoint($medium) {
-    font-size: $doc-font-size-medium;
-  }
+  // @include breakpoint($medium) {
+  //   font-size: $doc-font-size-medium;
+  // }
 
-  @include breakpoint($large) {
-    font-size: $doc-font-size-large;
-  }
+  // @include breakpoint($large) {
+  //   font-size: $doc-font-size-large;
+  // }
 
-  @include breakpoint($x-large) {
-    font-size: $doc-font-size-x-large;
-  }
+  // @include breakpoint($x-large) {
+  //   font-size: $doc-font-size-x-large;
+  // }
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
