@@ -125,21 +125,35 @@ CUDA를 12.9 까지 올려서 했더니 컴파일 옵션에 여러가지 문제�
 
 ### 1.7. 개발구성 및 테스트
 
-모두 완료하고 나서 C:\opencv\build410 로 전체 빌드완료한 파일들을 옮기려고 합니다. 솔루션의 CMakeTargets 아래에 INSTALL 프로젝트를 빌드합니다. INSTALL을 해야 Python OpenCV가 설치됩니다. 
+이 이후로 다시 Open 4.12로 테스트 해봤는데요. 3시간 10분이 걸려서 빌드되었고 INSTALL 까지 했습니다.
+
+모두 완료하고 나서 C:\opencv\build412 로 전체 빌드완료한 파일들을 옮기려고 합니다. 솔루션의 CMakeTargets 아래에 INSTALL 프로젝트를 빌드합니다. INSTALL을 해야 Python OpenCV가 설치됩니다. 
 
 이제 sysdm.cpl로 시스템 등록정보에 들어와 고급 > 환경 변수 버튼을 클릭합니다. 
 
-- OPENCV_DIR = C:\opencv\build410 추가
+- OPENCV_DIR = C:\opencv\build412 추가
 - Path에 %OPENCV_DIR%\x64\vc17\bin 추가
 
 이제 콘솔창에서 아래와 같이 입력해봅니다.
 
 ```shell
-C:\Users\HugoSung>opencv_version
-4.10.0
-
-C:\Users\HugoSung>
+PS C:\Users\HugoSung> opencv_version
+4.12.0
+PS C:\Users\HugoSung>
 ```
 
-이러면 성공입니다! 
+이러면 성공입니다! 다음 Python을 해보죠.
+
+```python
+PS C:\Users\HugoSung> python
+Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'4.12.0'
+>>> cv2.cuda.getCudaEnabledDeviceCount()
+1
+```
+
+getCudaEnabledDeviceCount()의 결과가 1이면 CUDA가 동작한다는 뜻입니다. 드디어, 이틀 반만에 성공했네요. 그리고 어떻게 해야 하는지도 다 파악했습니다. 다음 번엔, Visual Studio Ninja를 사용해서 빌드시간을 확 줄여보겠습니다. 끝!
 
