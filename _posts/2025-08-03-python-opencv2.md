@@ -127,7 +127,7 @@ CUDA를 12.9 까지 올려서 했더니 컴파일 옵션에 여러가지 문제�
 
 이 이후로 다시 Open 4.12로 테스트 해봤는데요. 3시간 10분이 걸려서 빌드되었고 INSTALL 까지 했습니다.
 
-모두 완료하고 나서 C:\opencv\build412 로 전체 빌드완료한 파일들을 옮기려고 합니다. 솔루션의 CMakeTargets 아래에 INSTALL 프로젝트를 빌드합니다. INSTALL을 해야 Python OpenCV가 설치됩니다. 
+모두 완료하고 나서 C:\opencv\build412 로 전체 빌드완료한 파일들을 옮기려고 합니다. 솔루션의 CMakeTargets 아래에 INSTALL 프로젝트를 빌드합니다. INSTALL을 해야 Python OpenCV가 설치됩니다. 이때 INSTALL 프로젝트를 시작프로젝트로 설정을 하고 빌드를 시작합니다. 한 15초 정도 밖에 안걸리는 게 빌드된 걸 C:\opencv\build412 로 옮기기만 하기 때문입니다.
 
 이제 sysdm.cpl로 시스템 등록정보에 들어와 고급 > 환경 변수 버튼을 클릭합니다. 
 
