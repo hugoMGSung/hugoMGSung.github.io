@@ -230,7 +230,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 future: true
 
 # Pagination with jekyll-paginate
