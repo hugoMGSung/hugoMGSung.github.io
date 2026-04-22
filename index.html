@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hugo's Devfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#top" class="logo">
+          <img src="favicon.ico" alt="" aria-hidden="true" />
+          <span>Hugo's Devfolio</span>
+        </a>
+        <nav class="site-nav" aria-label="주요 메뉴">
+          <a href="#top">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow">Developer & IoT Enthusiast</p>
+            <h1>현실과 디지털을 연결하는<br />모던 웹 포트폴리오</h1>
+            <p>
+              안녕하세요, Hugo입니다. IoT와 웹 기술을 결합해 사용자에게 실질적인
+              가치를 제공하는 서비스를 만들고 있습니다. 아래에서 주요 프로젝트를
+              확인해 보세요.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div class="carousel" aria-label="프로젝트 캐러셀">
+            <button class="carousel-btn prev" type="button" aria-label="이전 프로젝트">
+              &#10094;
+            </button>
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <article class="project-card active">
+                  <h3>Smart Home Dashboard</h3>
+                  <p>
+                    실시간 센서 데이터 모니터링과 알림 시스템을 제공하는 IoT 홈
+                    대시보드입니다.
+                  </p>
+                </article>
+                <article class="project-card">
+                  <h3>Factory Device Monitor</h3>
+                  <p>
+                    공장 설비 상태를 시각화하고 이상 징후를 빠르게 감지하도록 만든
+                    운영 모니터링 툴입니다.
+                  </p>
+                </article>
+                <article class="project-card">
+                  <h3>Wearable Health Tracker</h3>
+                  <p>
+                    웨어러블 기기의 건강 데이터를 수집해 개인 맞춤 인사이트를
+                    제공하는 서비스입니다.
+                  </p>
+                </article>
+              </div>
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="다음 프로젝트">
+              &#10095;
+            </button>
+          </div>
+          <div class="carousel-dots" aria-label="프로젝트 선택 버튼"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact Me</h2>
+          <form class="contact-form">
+            <label for="name">이름</label>
+            <input id="name" name="name" type="text" placeholder="홍길동" required />
+
+            <label for="email">이메일</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="message">메시지</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="문의 내용을 입력해주세요."
+              required
+            ></textarea>
+
+            <button type="submit">보내기</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

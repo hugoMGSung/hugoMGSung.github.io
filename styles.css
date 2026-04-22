@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f8fb;
+  color: #111111;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e8ebf2;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111111;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 700;
+}
+
+.site-nav a:hover {
+  color: #3d63ff;
+}
+
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(8, 12, 28, 0.72),
+      rgba(8, 12, 28, 0.48)
+    ),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  padding: 70px 0;
+}
+
+.hero-text {
+  max-width: 680px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #b7c8ff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.hero h1 {
+  margin: 10px 0 18px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.hero p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.projects,
+.contact {
+  padding: 48px 0;
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: 1.9rem;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.project-card {
+  min-width: 100%;
+  padding: 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e8ebf2;
+  box-shadow: 0 12px 26px rgba(15, 15, 15, 0.08);
+}
+
+.project-card h3 {
+  margin: 0 0 12px;
+}
+
+.project-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.carousel-btn {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: #c8cedd;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #3d63ff;
+}
+
+.contact-form {
+  max-width: 680px;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d8deea;
+  border-radius: 10px;
+  font: inherit;
+  background: #ffffff;
+}
+
+.contact-form button {
+  justify-self: start;
+  border: 0;
+  border-radius: 10px;
+  background: #111111;
+  color: #ffffff;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    min-height: calc(100vh - 66px);
+  }
+
+  .hero-content {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .site-nav {
+    gap: 14px;
+    font-size: 0.95rem;
+  }
+
+  .carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+}
