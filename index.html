@@ -46,6 +46,7 @@
             <div class="carousel-track-container">
               <div class="carousel-track">
                 <article class="project-card active">
+                  <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80" alt="Smart Home Dashboard" class="project-img" />
                   <h3>Smart Home Dashboard</h3>
                   <p>
                     실시간 센서 데이터 모니터링과 알림 시스템을 제공하는 IoT 홈
@@ -53,6 +54,7 @@
                   </p>
                 </article>
                 <article class="project-card">
+                  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Factory Device Monitor" class="project-img" />
                   <h3>Factory Device Monitor</h3>
                   <p>
                     공장 설비 상태를 시각화하고 이상 징후를 빠르게 감지하도록 만든
@@ -60,6 +62,7 @@
                   </p>
                 </article>
                 <article class="project-card">
+                  <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1200&q=80" alt="Wearable Health Tracker" class="project-img" />
                   <h3>Wearable Health Tracker</h3>
                   <p>
                     웨어러블 기기의 건강 데이터를 수집해 개인 맞춤 인사이트를
@@ -72,6 +75,51 @@
               &#10095;
             </button>
           </div>
+          <script>
+            // Carousel 자동 슬라이드 (10초마다)
+            document.addEventListener("DOMContentLoaded", function () {
+              const track = document.querySelector(".carousel-track");
+              const cards = Array.from(track.children);
+              const prevBtn = document.querySelector(".carousel-btn.prev");
+              const nextBtn = document.querySelector(".carousel-btn.next");
+              let currentIndex = 0;
+              let intervalId;
+
+              function updateCarousel(newIndex) {
+                cards[currentIndex].classList.remove("active");
+                currentIndex = newIndex;
+                cards[currentIndex].classList.add("active");
+              }
+
+              function showNext() {
+                let nextIndex = (currentIndex + 1) % cards.length;
+                updateCarousel(nextIndex);
+              }
+              function showPrev() {
+                let prevIndex = (currentIndex - 1 + cards.length) % cards.length;
+                updateCarousel(prevIndex);
+              }
+
+              nextBtn.addEventListener("click", () => {
+                showNext();
+                restartInterval();
+              });
+              prevBtn.addEventListener("click", () => {
+                showPrev();
+                restartInterval();
+              });
+
+              function startInterval() {
+                intervalId = setInterval(showNext, 10000); // 10초 마다
+              }
+              function restartInterval() {
+                clearInterval(intervalId);
+                startInterval();
+              }
+
+              startInterval();
+            });
+          </script>
           <div class="carousel-dots" aria-label="프로젝트 선택 버튼"></div>
         </div>
       </section>
